@@ -1,4 +1,4 @@
-Задание 1
+Task 1
 
 scooter_rent=# SELECT cos.login, COUNT(ors."inDelivery") AS "kolichestvo_dostavok"
 FROM "Couriers" AS cos LEFT JOIN "Orders" AS ors ON cos.id = ors."courierId"
@@ -10,7 +10,7 @@ WHERE ors."inDelivery" = true GROUP BY cos.login;
 
 
 
-Задание 2
+Task 2
 
 scooter_rent=# SELECT track, CASE
         WHEN finished = true THEN 2
