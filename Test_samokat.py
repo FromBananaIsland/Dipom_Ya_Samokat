@@ -1,3 +1,4 @@
+# Дмитрий Лагунов, 17-я когорта — Финальный проект. Инженер по тестированию плюс
 from data import order_body # импортирую тело заказ
 from sender_stand_request import create_order, get_order # импортирую функции создание заказ и получение инфы по номеру
 
