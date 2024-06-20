@@ -1,3 +1,4 @@
+# Дмитрий Лагунов, 17-я когорта — Финальный проект. Инженер по тестированию плюс
 import requests # подтягиваю библиотеку
 from configuration import create, get_information # импортирую ручки из configuration
 def create_order(order_body):        # создается заказа
