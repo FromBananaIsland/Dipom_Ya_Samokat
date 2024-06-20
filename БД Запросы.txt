@@ -1,0 +1,31 @@
+Задание 1
+
+scooter_rent=# SELECT cos.login, COUNT(ors."inDelivery") AS "kolichestvo_dostavok"
+FROM "Couriers" AS cos LEFT JOIN "Orders" AS ors ON cos.id = ors."courierId"
+WHERE ors."inDelivery" = true GROUP BY cos.login;
+ login | kolichestvo_dostavok
+-------+----------------------
+ Pupa  |                    4
+(1 row)
+
+
+
+Задание 2
+
+scooter_rent=# SELECT track, CASE
+        WHEN finished = true THEN 2
+        WHEN cancelled = true THEN -1
+        WHEN "inDelivery" = true THEN 1
+  ELSE 0 END AS status from "Orders";
+ track  | status
+--------+--------
+ 637705 |      1
+ 637705 |      2
+ 835320 |      0
+ 127261 |      1
+ 127261 |      1
+ 668873 |      0
+ 841915 |     -1
+(7 rows)
+
+
